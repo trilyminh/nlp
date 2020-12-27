@@ -13,5 +13,3 @@ Nhưng các câu hỏi cần cách nhau bởi dấu xuống hàng. Nếu file tr
 - Các câu trả lời tuần tự được in ra theo cáo file "output_a.txt", "output_b.txt", "output_c.txt", "output_d.txt"
 
 - Ngoài đáp áp được xuất ra các file out_put, thì còn được thể hiện qua bảng terminal gõ lệnh.
-
-- Mọi khó khăn trong việc thực thi chương trình vui lòng liên hệ Võ Tiến Đạt. Email: "votidat@gmail.com". Phone: "0799712148"
