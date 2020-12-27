@@ -1,24 +1,15 @@
 
 token_dicts = {
-    "xe bus": ("N", "BUS"),
-    "b3": ("N", "B3"),
-    "những xe bus": ("N", "BUS"),
-    "những xe": ("N", "BUS"),
+    "họ tên": ("N", "Họ Tên Sinh Viên"),
     "nào": ("WH", "NÀO"),
     "đi": ("V", "ĐI"),
-    "xuất phát": ("V", "XUẤT PHÁT"),
     "lúc": ("P", "LÚC"),
     "đến": ("P", "ĐẾN"),
     "từ": ("P", "TỪ"),
-    "thành phố huế": ("CITY", "HUE"),
-    "đà nẵng": ("CITY", "DANANG"),
-    "thành phố hồ chí minh": ("CITY", "HCMC"),
-    "huế": ("CITY", "HUE"),
-    "20:00hr": ("TIME", "20:00HR"),
     "thời gian": ("TIME", "RUN-TIME"),
     "sinh viên": ("N", "SINHVIEN"),
     "mã số sinh viên": ("N", "MSHV"),
-    "hãy liệt kê": ("WH", "Hãy liệt kê"),
+    "hãy liệt kê": ("WH", "Hãy liệt kê"),
     "môn": ("N", "MON"),
     "xử lý ngôn ngữ tự nhiên": ("N", "XLNNTN"),
     "ngôn ngữ lập trình": ("N", "NNLT"),
@@ -43,13 +34,13 @@ token_dicts = {
     "ở": ("P", "ở"),
     ",": (",", ","),
     "có": ("V", "có"),
-    "phòng": ("N", "phòng"),
-    "ngày": ("N", "ngày"),
-    "mấy": ("P", "mấy"),
-    "tiết": ("N", "tiết"),
+    "phòng": ("N", "PHONG"),
+    "ngày": ("N", "NGAY"),
+    "mấy": ("WH", "mấy"),
+    "tiết": ("N", "TIET"),
     "tên sinh viên": ("N", "tên sinh viên"),
     "tên": ("N", "tên môn học"),
-    "khác": ("V", "khác"),
+    "khác": ("V", "khác"),
     "môn học": ("N", "môn học")
 }
 preposition_dict = {
@@ -60,17 +51,18 @@ preposition_dict = {
 noun_dict = {
     "môn": "MON",
     "mã số sinh viên": "MSHV",
+    "tiết": "TIET",
+    "phòng": "PHONG",
+    "ngày": "NGAY",
 }
 
 
 dependency_dict = {
     "N_WH": ("right_arc", "NMOD"),
     "WH_N": ("left_arc", "NMOD"),
-    "V_CITY": ("right_arc", "NMOD"),
     "N_N": ("right_arc", "NMOD"),
     "TIME_WH": ("right_arc", "NMOD"),
     "N_V": ("left_arc", "NSUBJ"),
-    "P_CITY": ("left_arc", "CASE"),
     "V_TIME": ("right_arc", "TMOD"),
     "TIME_V": ("left_arc", "TMOD"),
     "P_TIME": ("left_arc", "CASE"),
@@ -80,38 +72,25 @@ dependency_dict = {
 }
 
 database_dict = {
-    "BUS": {"B1", "B2", "B3", "B4"},
-    "ATIME": {
-        "B1 HUE 22:00HR",
-        "B2 HUE 22:30HR",
-        "B3 HCMC 05:00HR",
-        "B4 HCMC 05:30HR",
-        "B5 DANANG 13:30HR",
-        "B6 DANANG 09:30HR",
-        "B7 HCMC 20:30HR",
-    },
-    "DTIME": {
-        "B1 HCMC 10:00HR",
-        "B2 HCMC 12:30HR",
-        "B3 DANANG 19:00HR",
-        "B4 DANANG 17:30HR",
-        "B5 HUE 8:30HR",
-        "B6 HUE 5:30HR",
-        "B7 HUE 8:30HR",
-    },
-    "RUNTIME": {
-        "B1 HCMC HUE 12:00HR",
-        "B2 HCMC HUE 10:00HR",
-        "B3 DANANG HCMC 14:00HR",
-        "B4 HCMC DANANG 12:00HR",
-        "B5 DANANG HUE 5:00HR",
-        "B6 DANANG HUE 4:00HR",
-        "B7 HCMC HUE 12:00HR",
-    },
     "MON":{
         "XLNNTN",
         "NNLT",
         "CSDL"
+    },
+    "MON_TIET": {
+        "XLNNTN 7",
+        "NNLT 1",
+        "CSDL 4"
+    },
+    "MON_NGAY": {
+        "XLNNTN T2",
+        "NNLT T4",
+        "CSDL T6"
+    },
+    "MON_PHONG": {
+        "XLNNTN 205/B10",
+        "NNLT 402/C6",
+        "CSDL 206/B10"
     },
     "MA_HV": {
         "MT12001",

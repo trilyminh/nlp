@@ -2,19 +2,31 @@ import io
 
 
 def schedule_procedural_form_string(question_logical_form, question):
-    question_procedural = [question_logical_form.r[0]]
-    index = 1
-    while index < len(question_logical_form.r):
-        role = question_logical_form.r[index].split(" ")[0].replace("(", "")
-        if role == "MON":
-            m = question_logical_form.r[index].split(" ")[-1][:-1]
-            question_procedural.append("(LICH_HOC b {})".format(m))
-        if role == "MSHV":
-            m = question_logical_form.r[index].split(" ")[-1][:-1]
-            question_procedural.append("(LICH_HOC {} b)".format(m))
-        index += 1
-
-    return question_procedural
+    list_question_procedural = {}
+    for key_query,question_logical_form_r_entry in enumerate(question_logical_form.r):
+        if ' b)' in question_logical_form_r_entry and len(question_logical_form_r_entry.split(" ")) <= 2:
+            question_procedural = [question_logical_form_r_entry]
+            # condition query
+            index = 0
+            while index < len(question_logical_form.r):
+                if ' b)' not in question_logical_form.r[index]:
+                    role = question_logical_form.r[index].split(" ")[0].replace("(", "")
+                    m = question_logical_form.r[index].split(" ")[-1][:-1]
+                    if role == "MON":
+                        if '(SINHVIEN b)' in question_logical_form_r_entry:
+                            question_procedural.append("(LICH_HOC b {})".format(m))
+                        if '(PHONG b)' in question_logical_form_r_entry:
+                            question_procedural.append("(MON_PHONG {} b)".format(m))
+                        if '(TIET b)' in question_logical_form_r_entry:
+                            question_procedural.append("(MON_TIET {} b)".format(m))
+                        if '(NGAY b)' in question_logical_form_r_entry:
+                            question_procedural.append("(MON_NGAY {} b)".format(m))
+                    if role == "MSHV":
+                        if '(MON b)' in question_logical_form_r_entry:
+                            question_procedural.append("(LICH_HOC {} b)".format(m))
+                index += 1
+            list_question_procedural[question_logical_form_r_entry] = question_procedural
+    return list_question_procedural
 
 def procedural_form_string(question_logical_form, question):
     if question_logical_form.r[0].split(" ")[0].replace("(", "") == "BUS":

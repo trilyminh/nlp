@@ -33,17 +33,20 @@ def logical_form_string(question_dependency, question):
         if relation == "NSUBJ":
             question_logical_form.p.append("({} b)".format(word1.upper().replace(" ", "")))
         elif relation == "CASE":
-            if word2 not in preposition_dict:
-                exit("Error: Cannot parse question " + question)
-            question_logical_form.r.append(
-                "({} b {})".format(preposition_dict[word2], token_dicts[word1][1]))
-            index += 1
+            # if word2 not in preposition_dict:
+            #     exit("Error: Cannot parse question " + question)
+            # question_logical_form.r.append(
+            #     "({} b {})".format(preposition_dict[word2], token_dicts[word1][1]))
+            test = 1
         elif relation == "NMOD":
             if word1 not in noun_dict:
                 question_logical_form.r.append("({} {} b)".format(token_dicts[word1][1], token_dicts[word2][1]))
             else:
-                question_logical_form.r.append(
-                    "({} b {})".format(noun_dict[word1],token_dicts[word2][1]))
+                if token_dicts[word2][0] == 'WH':
+                    question_logical_form.r.append("({} b)".format(token_dicts[word1][1]))
+                else:
+                    question_logical_form.r.append(
+                        "({} b {})".format(noun_dict[word1],token_dicts[word2][1]))
 
         index += 1
 

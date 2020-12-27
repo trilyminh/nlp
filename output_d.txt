@@ -1,35 +1,20 @@
 =========
+Câu hỏi: Môn Cơ sở dữ liệu học ở phòng nào, ngày nào, học mấy tiết?
+
+- Kết quả truy xuất dữ liệu: {'TIET_HOC': {'4'}, 'PHONG_HOC': {'206/B10'}, 'NGAY_HOC': {'T6'}}
+=========
 Câu hỏi: Hãy cho biết sinh viên có mã số sinh viên MT12003 học môn nào?
 
-- Kết quả truy xuất dữ liệu: {'XLNNTN'}
-=========
-Câu hỏi: môn nào có sinh viên có mã số sinh viên MT12003 học?
-
-- Kết quả truy xuất dữ liệu: {'XLNNTN'}
+- Kết quả truy xuất dữ liệu: {'MON_HOC': {'XLNNTN'}}
 =========
 Câu hỏi: Sinh viên nào học môn cơ sở dữ liệu?
 
-- Kết quả truy xuất dữ liệu: ['MT1306-Phạm văn Ba', 'MT1101-Trần Thị Tuyết']
+- Kết quả truy xuất dữ liệu: {'SINH_VIEN': ['MT1306-Phạm văn Ba', 'MT1101-Trần Thị Tuyết']}
 =========
-Câu hỏi: Xe bus nào đi đến thành phố Hồ Chí Minh ?
+Câu hỏi: Môn nào có sinh viên có mã số sinh viên MT1306 học?
 
-- Kết quả truy xuất dữ liệu: {'B3', 'B4'}
+- Kết quả truy xuất dữ liệu: {'MON_HOC': {'CSDL'}}
 =========
-Câu hỏi: Xe bus nào đi đến thành phố Huế lúc 20:00HR ?
+Câu hỏi: hãy liệt kê họ tên sinh viên, mã số sinh viên, tên môn học khác môn học Xử lý ngôn ngữ tự nhiên?
 
-- Kết quả truy xuất dữ liệu: None
-=========
-Câu hỏi: Thời gian nào xe bus B3 đi từ Đà Nẵng đến Huế ?
-
-- Kết quả truy xuất dữ liệu: None
-=========
-Câu hỏi: Những xe bus nào đi đến Huế ?
-
-- Kết quả truy xuất dữ liệu: {'B2', 'B1'}
-=========
-Câu hỏi: Những xe nào xuất phát từ thành phố Hồ Chí Minh ?
-
-- Kết quả truy xuất dữ liệu: {'B2', 'B1'}
-=========
-Câu hỏi: Những xe nào đi từ Đà nẵng đến thành phố Hồ Chí Minh ?
-- Kết quả truy xuất dữ liệu: {'B3', 'B4'}
+- Kết quả truy xuất dữ liệu: {}

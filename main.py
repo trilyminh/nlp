@@ -28,27 +28,16 @@ def run_program(question):
     print("Quan hệ văn phạm: ", question_dependency_grammer)
     question_logical_form = logical_form_string(question_dependency_grammer, question)
     print("Dạng luận lý: ", question_logical_form)
-
-    if question_logical_form.r[0].split(" ")[0].replace("(", "") in ['SINHVIEN','MON']:
-        question_procedural = schedule_procedural_form_string(question_logical_form, question)
-    else:
-        question_procedural = procedural_form_string(question_logical_form, question)
-
-    print("Ngữ nghĩa thủ tục: ", question_procedural)
-
-    if question_logical_form.r[0].split(" ")[0].replace("(", "") in ['SINHVIEN','MON']:
-        answer = schedule_query_string(question_logical_form, question_procedural, question)
-    else:
-        answer = query_string(question_logical_form, question_procedural, question)
-
+    list_question_procedural = schedule_procedural_form_string(question_logical_form, question)
+    print("Ngữ nghĩa thủ tục: ", list_question_procedural)
+    answer = schedule_query_string(question_logical_form, list_question_procedural, question)
     print("Kết quả truy xuất dữ liệu: ", answer)
-
 
 def main():
     clear_file()
     list_question = read_input_question()
     if len(list_question) == 0:
-        question = "Xe bus nào đi đến thành phố Huế lúc 20:00HR ?"
+        question = "Sinh viên nào học môn cơ sở dữ liệu?"
         run_program(question)
     else:
         for question in list_question:
