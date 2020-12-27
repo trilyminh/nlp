@@ -1,0 +1,8 @@
+Sinh viên nào học môn cơ sở dữ liệu?
+Hãy cho biết sinh viên có mã số sinh viên MT12003 học môn nào?
+Xe bus nào đi đến thành phố Hồ Chí Minh ?
+Xe bus nào đi đến thành phố Huế lúc 20:00HR ?
+Thời gian nào xe bus B3 đi từ Đà Nẵng đến Huế ?
+Những xe bus nào đi đến Huế ?
+Những xe nào xuất phát từ thành phố Hồ Chí Minh ?
+Những xe nào đi từ Đà nẵng đến thành phố Hồ Chí Minh ?

@@ -1,0 +1,4 @@
+=========
+Câu hỏi: Sinh viên nào học môn cơ sở dữ liệu?
+
+- Quan hệ văn phạm: ['NMOD(sinh viên,nào)', 'NSUBJ(học,sinh viên)', 'NMOD(môn,cơ sở dữ liệu)']
