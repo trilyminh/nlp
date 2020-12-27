@@ -12,14 +12,23 @@ def parse_dependency(dependency):
 
 def logical_form_string(question_dependency, question):
     question_logical_form = LogicalFormWH([], [])
-    index = 1
-    relation, word1, word2 = parse_dependency(question_dependency[0])
+    index = 0
 
+    lastKeyWh = 0
+    for keyDependency,question_dependency_entry in enumerate(question_dependency):
+        relation, word1, word2 = parse_dependency(question_dependency_entry)
+        if relation == 'NMOD' and (token_dicts[word1][0] == 'WH' or token_dicts[word2][0] == 'WH'):
+            lastKeyWh = keyDependency
+
+    relation, word1, word2 = parse_dependency(question_dependency[lastKeyWh])
     if relation != "NMOD" and word2 != "nào":
         exit("Error: Cannot parse question " + question)
 
     question_logical_form.r.append("({} b)".format(token_dicts[word1][1]))
     while index < len(question_dependency):
+        if index == lastKeyWh:
+            index += 1
+            continue
         relation, word1, word2 = parse_dependency(question_dependency[index])
         if relation == "NSUBJ":
             question_logical_form.p.append("({} b)".format(word1.upper().replace(" ", "")))

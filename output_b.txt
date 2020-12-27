@@ -1,0 +1,35 @@
+=========
+Câu hỏi: Hãy cho biết sinh viên có mã số sinh viên MT12003 học môn nào?
+
+- Dạng luận lý: WH b: (&(MON b)(SINHVIEN Hãy cho biết b)(MSHV b mt12003)) (CÓ b)(HỌC b)
+=========
+Câu hỏi: môn nào có sinh viên có mã số sinh viên MT12003 học?
+
+- Dạng luận lý: WH b: (&(MON b)(MSHV b mt12003)) (CÓ b)(CÓ b)(HỌC b)
+=========
+Câu hỏi: Sinh viên nào học môn cơ sở dữ liệu?
+
+- Dạng luận lý: WH b: (&(SINHVIEN b)(MON b CSDL)) (HỌC b)
+=========
+Câu hỏi: Xe bus nào đi đến thành phố Hồ Chí Minh ?
+
+- Dạng luận lý: WH b: (&(BUS b)(DEST b HCMC)) (ĐI b)
+=========
+Câu hỏi: Xe bus nào đi đến thành phố Huế lúc 20:00HR ?
+
+- Dạng luận lý: WH b: (&(BUS b)(DEST b HUE)(TIME b 20:00HR)) (ĐI b)
+=========
+Câu hỏi: Thời gian nào xe bus B3 đi từ Đà Nẵng đến Huế ?
+
+- Dạng luận lý: WH b: (&(RUN-TIME b)(BUS B3 b)(SOURCE b DANANG)(DEST b HUE)) (ĐI b)
+=========
+Câu hỏi: Những xe bus nào đi đến Huế ?
+
+- Dạng luận lý: WH b: (&(BUS b)(DEST b HUE)) (ĐI b)
+=========
+Câu hỏi: Những xe nào xuất phát từ thành phố Hồ Chí Minh ?
+
+- Dạng luận lý: WH b: (&(BUS b)(SOURCE b HCMC)) (XUẤTPHÁT b)
+=========
+Câu hỏi: Những xe nào đi từ Đà nẵng đến thành phố Hồ Chí Minh ?
+- Dạng luận lý: WH b: (&(BUS b)(SOURCE b DANANG)(DEST b HCMC)) (ĐI b)

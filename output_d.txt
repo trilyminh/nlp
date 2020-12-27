@@ -1,0 +1,35 @@
+=========
+Câu hỏi: Hãy cho biết sinh viên có mã số sinh viên MT12003 học môn nào?
+
+- Kết quả truy xuất dữ liệu: {'XLNNTN'}
+=========
+Câu hỏi: môn nào có sinh viên có mã số sinh viên MT12003 học?
+
+- Kết quả truy xuất dữ liệu: {'XLNNTN'}
+=========
+Câu hỏi: Sinh viên nào học môn cơ sở dữ liệu?
+
+- Kết quả truy xuất dữ liệu: ['MT1101-Trần Thị Tuyết', 'MT1306-Phạm văn Ba']
+=========
+Câu hỏi: Xe bus nào đi đến thành phố Hồ Chí Minh ?
+
+- Kết quả truy xuất dữ liệu: {'B4', 'B3'}
+=========
+Câu hỏi: Xe bus nào đi đến thành phố Huế lúc 20:00HR ?
+
+- Kết quả truy xuất dữ liệu: None
+=========
+Câu hỏi: Thời gian nào xe bus B3 đi từ Đà Nẵng đến Huế ?
+
+- Kết quả truy xuất dữ liệu: None
+=========
+Câu hỏi: Những xe bus nào đi đến Huế ?
+
+- Kết quả truy xuất dữ liệu: {'B1', 'B2'}
+=========
+Câu hỏi: Những xe nào xuất phát từ thành phố Hồ Chí Minh ?
+
+- Kết quả truy xuất dữ liệu: {'B1', 'B2'}
+=========
+Câu hỏi: Những xe nào đi từ Đà nẵng đến thành phố Hồ Chí Minh ?
+- Kết quả truy xuất dữ liệu: {'B4', 'B3'}

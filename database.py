@@ -18,7 +18,7 @@ token_dicts = {
     "thời gian": ("TIME", "RUN-TIME"),
     "sinh viên": ("N", "SINHVIEN"),
     "mã số sinh viên": ("N", "MSHV"),
-    "hãy liệt kê": ("P", "Hãy liệt kê"),
+    "hãy liệt kê": ("WH", "Hãy liệt kê"),
     "môn": ("N", "MON"),
     "xử lý ngôn ngữ tự nhiên": ("N", "XLNNTN"),
     "ngôn ngữ lập trình": ("N", "NNLT"),
@@ -59,6 +59,7 @@ preposition_dict = {
 }
 noun_dict = {
     "môn": "MON",
+    "mã số sinh viên": "MSHV",
 }
 
 
@@ -107,6 +108,11 @@ database_dict = {
         "B6 DANANG HUE 4:00HR",
         "B7 HCMC HUE 12:00HR",
     },
+    "MON":{
+        "XLNNTN",
+        "NNLT",
+        "CSDL"
+    },
     "MA_HV": {
         "MT12001",
         "MT12002",
@@ -141,7 +147,7 @@ database_dict = {
         "MT1104":"Trịnh Xuân Hùng",
         "MT1301":"Lê Thanh Uyên"
     },
-    "MON": {
+    "LICH_HOC": {
         "MT12001 XLNNTN",
         "MT12002 NNLT",
         "MT12003 XLNNTN",

@@ -1,4 +1,35 @@
 =========
+Câu hỏi: Hãy cho biết sinh viên có mã số sinh viên MT12003 học môn nào?
+
+- Quan hệ văn phạm: ['NMOD(sinh viên,hãy cho biết)', 'NSUBJ(có,sinh viên)', 'NMOD(mã số sinh viên,mt12003)', 'NSUBJ(học,mã số sinh viên)', 'NMOD(môn,nào)']
+=========
+Câu hỏi: môn nào có sinh viên có mã số sinh viên MT12003 học?
+
+- Quan hệ văn phạm: ['NMOD(môn,nào)', 'NSUBJ(có,môn)', 'NSUBJ(có,sinh viên)', 'NMOD(mã số sinh viên,mt12003)', 'NSUBJ(học,mã số sinh viên)']
+=========
 Câu hỏi: Sinh viên nào học môn cơ sở dữ liệu?
 
 - Quan hệ văn phạm: ['NMOD(sinh viên,nào)', 'NSUBJ(học,sinh viên)', 'NMOD(môn,cơ sở dữ liệu)']
+=========
+Câu hỏi: Xe bus nào đi đến thành phố Hồ Chí Minh ?
+
+- Quan hệ văn phạm: ['NMOD(xe bus,nào)', 'NSUBJ(đi,xe bus)', 'CASE(thành phố hồ chí minh,đến)', 'NMOD(đi,thành phố hồ chí minh)']
+=========
+Câu hỏi: Xe bus nào đi đến thành phố Huế lúc 20:00HR ?
+
+- Quan hệ văn phạm: ['NMOD(xe bus,nào)', 'NSUBJ(đi,xe bus)', 'CASE(thành phố huế,đến)', 'NMOD(đi,thành phố huế)', 'CASE(20:00hr,lúc)', 'TMOD(đi,20:00hr)']
+=========
+Câu hỏi: Thời gian nào xe bus B3 đi từ Đà Nẵng đến Huế ?
+
+- Quan hệ văn phạm: ['NMOD(thời gian,nào)', 'NMOD(xe bus,b3)', 'NSUBJ(đi,xe bus)', 'TMOD(đi,thời gian)', 'CASE(đà nẵng,từ)', 'NMOD(đi,đà nẵng)', 'CASE(huế,đến)', 'NMOD(đi,huế)']
+=========
+Câu hỏi: Những xe bus nào đi đến Huế ?
+
+- Quan hệ văn phạm: ['NMOD(những xe bus,nào)', 'NSUBJ(đi,những xe bus)', 'CASE(huế,đến)', 'NMOD(đi,huế)']
+=========
+Câu hỏi: Những xe nào xuất phát từ thành phố Hồ Chí Minh ?
+
+- Quan hệ văn phạm: ['NMOD(những xe,nào)', 'NSUBJ(xuất phát,những xe)', 'CASE(thành phố hồ chí minh,từ)', 'NMOD(xuất phát,thành phố hồ chí minh)']
+=========
+Câu hỏi: Những xe nào đi từ Đà nẵng đến thành phố Hồ Chí Minh ?
+- Quan hệ văn phạm: ['NMOD(những xe,nào)', 'NSUBJ(đi,những xe)', 'CASE(đà nẵng,từ)', 'NMOD(đi,đà nẵng)', 'CASE(thành phố hồ chí minh,đến)', 'NMOD(đi,thành phố hồ chí minh)']

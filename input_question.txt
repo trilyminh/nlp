@@ -1,5 +1,6 @@
-Sinh viên nào học môn cơ sở dữ liệu?
 Hãy cho biết sinh viên có mã số sinh viên MT12003 học môn nào?
+môn nào có sinh viên có mã số sinh viên MT12003 học?
+Sinh viên nào học môn cơ sở dữ liệu?
 Xe bus nào đi đến thành phố Hồ Chí Minh ?
 Xe bus nào đi đến thành phố Huế lúc 20:00HR ?
 Thời gian nào xe bus B3 đi từ Đà Nẵng đến Huế ?

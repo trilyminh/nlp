@@ -4,10 +4,15 @@ import io
 def tri_procedural_form_string(question_logical_form, question):
     question_procedural = [question_logical_form.r[0]]
     index = 1
-    role = question_logical_form.r[index].split(" ")[0].replace("(", "")
-    if role == "MON":
-        m = question_logical_form.r[index].split(" ")[-1][:-1]
-        question_procedural.append("(MON b {})".format(m))
+    while index < len(question_logical_form.r):
+        role = question_logical_form.r[index].split(" ")[0].replace("(", "")
+        if role == "MON":
+            m = question_logical_form.r[index].split(" ")[-1][:-1]
+            question_procedural.append("(LICH_HOC b {})".format(m))
+        if role == "MSHV":
+            m = question_logical_form.r[index].split(" ")[-1][:-1]
+            question_procedural.append("(LICH_HOC {} b)".format(m))
+        index += 1
 
     return question_procedural
 
