@@ -1,7 +1,7 @@
 from database import *
 import io
 
-def tri_query_string(question_logical_form, question_procedural, question):
+def schedule_query_string(question_logical_form, question_procedural, question):
 
     # sinh vien nao
     if question_logical_form.r[0].split(" ")[0].replace("(", "") in ["SINHVIEN"]:

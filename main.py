@@ -30,14 +30,14 @@ def run_program(question):
     print("Dạng luận lý: ", question_logical_form)
 
     if question_logical_form.r[0].split(" ")[0].replace("(", "") in ['SINHVIEN','MON']:
-        question_procedural = tri_procedural_form_string(question_logical_form, question)
+        question_procedural = schedule_procedural_form_string(question_logical_form, question)
     else:
         question_procedural = procedural_form_string(question_logical_form, question)
 
     print("Ngữ nghĩa thủ tục: ", question_procedural)
 
     if question_logical_form.r[0].split(" ")[0].replace("(", "") in ['SINHVIEN','MON']:
-        answer = tri_query_string(question_logical_form, question_procedural, question)
+        answer = schedule_query_string(question_logical_form, question_procedural, question)
     else:
         answer = query_string(question_logical_form, question_procedural, question)
 

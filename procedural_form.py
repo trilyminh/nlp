@@ -1,7 +1,7 @@
 import io
 
 
-def tri_procedural_form_string(question_logical_form, question):
+def schedule_procedural_form_string(question_logical_form, question):
     question_procedural = [question_logical_form.r[0]]
     index = 1
     while index < len(question_logical_form.r):
